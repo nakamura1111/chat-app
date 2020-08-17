@@ -52,20 +52,98 @@
   width: calc(100vw - 300px);
   background-color: #ffffff;
 }
-
+/* メインヘッダー */
 .main-header{
   height: 100px;
   /* background-color: #ffffff; */
   padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
+.current-room{
+  font-size: 24px;
+  color: #333;
+  margin-top: 36px;                     /* a要素に入っている文字の上端からmargin */
+}
+.room-delete-btn{
+  margin-top: 40px;                     /* a要素に入っている文字の上端からmargin */
+}
+.room-delete-btn a{
+  text-decoration: none;
+  color: darkred;
+  padding: 20px;
+  border: 1px solid darkred;
+}
+
+/* チャット画面 */
 .main-messages{
   height: calc(100vh - 100px - 90px);
   background-color: #fafafa;
   padding: 46px 40px 0;
 }
+.message{
+  padding: 10px 0;
+  /* border: 1px solid red; */
+}
+.top-message{
+  display: flex;
+}
+.sender{
+  font-size: 16px;
+  color: #434a54;
+}
+.time-stamp{
+  font-size: 12px;
+  color: #999;
+  padding-left: 10px;
+}
+.bottom-message{
+  margin-top: 10px;
+}
+.text-photo{
+  font-size: 14px;
+  color: #434a54;
+  margin-bottom: 40px;
+}
+/* フォーム */
 .main-form{
   height: 90px;
   background-color: #dddddd;
   padding: 20px 40px;
+  display: flex;
+  box-sizing: border-box;
+}
+.form-input{
+  background-color: white;
+  display: flex;
+  width: 100%;                      /* 箱が伸びるぞ！ 「幅いっぱい」を表現するなら、vh,vw の他に % もあるよ！*/
+}
+.form-message{
+  border: none;
+  height: 50px; 
+  padding-left: 10px; 
+  width: 100%;                      /* 箱が伸びるぞ！*/
+}
+.form-submit{
+  border: none;
+  height: 50px;
+  font-size: 16px;
+  color: white;
+  background-color: #38aef0;
+  padding: 0 20px;
+  margin-left: 15px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.hidden {
+  display: none;
 }
 
