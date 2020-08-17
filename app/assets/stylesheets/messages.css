@@ -1,0 +1,71 @@
+.wrapper{
+  display: flex;
+}
+/* サイド */
+.side-bar{
+  width: 300px;
+  height: 100vh;
+  background-color: #253141;
+}
+/* サイドヘッダー */
+.side-header{
+  height: 100px;
+  background-color: #253141;
+  padding: 0 20px;                      /* paddingは局所的に与える */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-name a {                          /* a要素の文字をいじるので */
+  font-size: 16px;
+  color: #fafafa;
+  text-decoration: none;                /* リンクにつくアンダーバーをなくす */
+}
+.room-create-btn{
+  font-size: 10px;
+}
+.room-create-btn a {                    /* 文字に対するCSSはこっち */
+  color: deepskyblue;
+  padding: 14px;
+  border: 1px solid lightblue;
+  text-decoration: none;                /* リンクにつくアンダーバーをなくす */
+}
+
+/* ルーム一覧 */
+.side-rooms{
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 0 20px;
+  overflow: scroll;
+}
+.room {                                  /* 冗長な気がする... */
+  padding: 20px 0 40px;
+}
+.room-name a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 0 40px;
+}
+
+/* メイン */
+.main-bar{
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
+
+.main-header{
+  height: 100px;
+  /* background-color: #ffffff; */
+  padding: 0 40px;
+}
+.main-messages{
+  height: calc(100vh - 100px - 90px);
+  background-color: #fafafa;
+  padding: 46px 40px 0;
+}
+.main-form{
+  height: 90px;
+  background-color: #dddddd;
+  padding: 20px 40px;
+}
+
