@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def index
-    @room = Room.find(params[:room_id])
     @message = Message.new()
+    @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user)        # 「今のチャットルーム」の「メッセージたち」を定義する。このとき、userの情報を何度も呼び出したくないからincludeで一回だけ呼び出すよ
   end
 
