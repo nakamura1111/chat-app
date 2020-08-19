@@ -20,7 +20,7 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+ Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }      # support 処理（繰り返し使うメソッド）を開放　spec/support/**/'*.rb'と同じでは？
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -34,6 +34,7 @@ end
 I18n.locale = "en"
 
 RSpec.configure do |config|
+  config.include SignInSupport
   #config.before(:all) do
     #FactoryBot.reload          # spring対策らしい https://masawada.hatenablog.jp/entry/2018/01/06/012845
   #end
